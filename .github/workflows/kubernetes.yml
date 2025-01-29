@@ -20,7 +20,7 @@ jobs:
           push: true
           tags: ghcr.io/${{ github.repository }}:${{ github.sha }}
       - name: Run Docker image
-        run: docker run --name hello-world -d -p 9080:9080 ghcr.io/${{ github.repository }}:${{ github.sha }}
+        run: docker run -it --name hello-world -d -p 9080:9080 ghcr.io/${{ github.repository }}:${{ github.sha }}
        
 
 
