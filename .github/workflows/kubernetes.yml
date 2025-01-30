@@ -21,9 +21,7 @@ jobs:
           tags: ghcr.io/${{ github.repository }}:${{ github.sha }}
       - name: Run Docker image
         run: docker run -it --name hello-world -d -p 9080:9080 ghcr.io/${{ github.repository }}:${{ github.sha }}
-       
-
-
+     
 on:
   push:
     if: github.ref_name == github.event.repository.default_branch
